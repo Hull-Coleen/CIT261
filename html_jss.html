@@ -11,11 +11,15 @@
 <input type="text" id="animalType"><br>animal type</input><br>
 <input type="text" id="animalMammal"><br>mammal or nonmammal</input><br>
 <input type="text" id="animalSize"><br>size</input><br>
-<button  onclick="createAnimal(), showAnimal()">submit</button><br>
+<button  onclick="showAnimal(createAnimal())">submit</button><br>
 <p id="showAnimal">Animal</p>
 <p id="showAnimal2">Animal</p>
 <p id="showAnimal3">Animal</p>
+<p id="showAnimal4">Animal</p>
+ 
 
+<button  onclick="showAnimal(createAnimalWithoutUserInput())">submit</button><br><br>
+<button  onclick="showAnimal(showWhatDoesNotWork())">submit</button><br>
 
 </body>
 </html>
