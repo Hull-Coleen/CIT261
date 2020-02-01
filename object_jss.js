@@ -36,7 +36,7 @@ function createAnimal() {
 // new instance
 function createAnimalWithoutUserInput() {
    var tiger = new Animal("tiger", "mammal", "large");
-   tiger.habitat = "Africa";
+   tiger.habitat = "Asia";
 return tiger;
 }
 // displays the information of the Animal Contructor
@@ -54,6 +54,7 @@ function showAnimal(a) {
 }
 function showWhatDoesNotWork() {
 	var t = createAnimalWithoutUserInput();
+	t.habitat = "africa";
 	//t.animalInfo();
 	return t;
 }
