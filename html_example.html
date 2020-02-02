@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-<script type="text/javascript" src="testJava.js"></script>
+<script type="text/javascript" src="javascript_example.js"></script>
+<script type="text/javascript" src="Java_css.js"></script>
 <title>HTML with Javascript</title>
 </head>
 <body>
@@ -9,22 +10,24 @@
  
 </script>
 <h1>Javascript and HTML</h1>
-<button onclick="displayArray(fruitArray)" >show array</button>
+<button class="buttons" onclick="displayArray(fruitArray)" >show array</button>
 
 
 <p id="fruit">Fruit in an array</p>
 
 <input type="text" id="fruitInput"></input>
-<input type="button" onclick = "addFruit(fruitArray)" value= "submit"></input>
+<input type="button" class="buttons" onclick = "addFruit(fruitArray)" value= "submit"></input>
 
 <p id="input">checking value</p>
 <input type="text" id="checkInput"></input>
-<input type="button" onclick = "checkArray(fruitArray)" value= "submit"></input>
+<input type="button" class="buttons" onclick = "checkArray(fruitArray)" value= "submit"></input>
 <p id="check">checking for item in an array</p>
 <input type="text" id="numberInput"><br>Enter a number between 1 and 5</input><br>
-<input type="button" onclick = "usingSwitch()" value= "submit"></input><br>
+<input type="button" class="buttons" onclick = "usingSwitch()" value= "submit"></input><br>
 <input type="text" id="AssocArr"><br>Enter either red, yellow or orange</input><br>
-<input type="button" onclick = "displayAssocArr()" value= "submit"></input>
+<input type="button" class="buttons" onclick = "displayAssocArr()" value= "submit"></input>
 <p id="numberSelect">number</p>
+<button class="buttons" onclick="tryCSS()" >change style</button>
+<p  class="p"id="classColor"></p>
 </body>
 </html>

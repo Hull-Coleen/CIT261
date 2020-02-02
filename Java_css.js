@@ -11,12 +11,10 @@ function tryCSS() {
 	// color to yellow and the text to red
 	var a = document.getElementsByClassName('classA');
 	for (var i = 0; i < a.length; i++) {
-    var b = a[i];
-    b.style.background = 'yellow';
-	b.style.color = 'red';
-	
-  
-}
+       var b = a[i];
+       b.style.background = 'yellow';
+	   b.style.color = 'red';
+    }
     //
 	var b = document.getElementById("AssocArr");
 	// change the body bacground to red
@@ -25,12 +23,19 @@ function tryCSS() {
 	// to red and font to Harrington
     var para = document.querySelectorAll("p");
 	for (var i = 0; i < para.length; i++) {
-    var b = para[i];
-    b.style.background = 'pink';
-	b.style.color = 'red';
-	b.style.fontFamily = 'Harrington'
+       var b = para[i];
+	   if(i % 2 == 0) {
+          b.style.background = 'pink';
+	      b.style.color = 'red';
+	      b.style.fontFamily = 'Harrington'
+	    }
+	    else {
+		   b.style.background = 'green';
+	       b.style.color = 'pink';
+	       b.style.fontFamily = 'Times New Roman'
+	    }
 	
-}
+    }
     // change the first p element font size
     para[0].style.fontSize = '25px';
 	
@@ -44,5 +49,6 @@ function tryCSS() {
     e.style.background = 'blue';
 	e.style.color = 'red';
 	e.style.borderRadius = '25px';
-  
+   
+   }
 }
