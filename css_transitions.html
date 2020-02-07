@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="Java_css.js"></script>
+<link rel="stylesheet" type="text/css" href="CSS_transitions.css">
+<title>CSS Transition</title>
+<script>
+function cssStyle() {
+  document.getElementById("para1").style.background = "pink";
+  document.getElementById("para1").style.fontSize = "50px";
+  document.getElementById("para1").style.height = "200px";
+  document.getElementById("para1").style.color = "blue";
+}
+function cssStyleBack(param) {
+   param.style.background ="blue";
+   param.style.fontSize = "25px";
+   param.style.height = "50px";
+   param.style.color = "pink";
+}
+</script>
+
+</head>
+<body>
+
+<h1 id="head1" name = "head1">CSS Transition</h1>
+
+<p onmouseover="cssStyle()" onmouseout="cssStyleBack(this)" id="para1">Paragraph</p>
+
+<img id= "img1"src="pink1.jpg" alt="purple flower" width="200px" height="200px">
+
+<picture id="img2" >
+  <source class="img2" media="(min-width: 850px)" srcset="dahlia-flowers-vintage-drawing.jpg">
+  <source class="img2" media="(min-width: 600px)" srcset="Pink-And-White-Flowers.png" >
+  <img src="pink1.jpg" alt="Flowers" style="width:auto;">  
+</picture>
+
+</body>
+</html>

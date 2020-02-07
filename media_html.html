@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="Java_css.js"></script>
+<link rel="stylesheet" type="text/css" href="CSS_transitions.css">
+
+<title>CSS Transition</title>
+</head>
+<body>
+    <video width="400" controls>
+        <source src="zoom_0.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    <div>
+    <audio controls id="myAudio">
+        
+        <source src="02 You'll Be In My Heart.mp3" type="audio/mpeg" >
+        Your browser does not support the audio element.
+      </audio>
+      <p id="musicAction" >You'll Be in My Heart</p>
+     
+    </div>
+    <script>
+       var aud = document.getElementById("myAudio");
+       aud.onplay = function() {
+            document.getElementById("musicAction").innerHTML = "Playing";
+        };
+        aud.onpause = function() {
+            document.getElementById("musicAction").innerHTML = "Paused";
+        };
+       
+    </script>
+    <canvas id="myCanvas" width="400" height="300" style="border:1px solid  black;"></canvas>
+
+</body>
+</html>

@@ -10,8 +10,9 @@ function displayArray(param) {
 
 }
 function addFruit(param) {
- 
-   param.push(document.getElementById("fruitInput").value);
+   if(document.getElementById("fruitInput").value != "") {
+      param.push(document.getElementById("fruitInput").value);
+   }
    
    if (document.getElementById("fruitInput").value == param[param.length - 1]) {
       document.getElementById("input").innerHTML = "fruit was added";
