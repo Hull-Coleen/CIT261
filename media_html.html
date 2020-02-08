@@ -2,36 +2,32 @@
 <html lang="en-us">
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="Java_css.js"></script>
-<link rel="stylesheet" type="text/css" href="CSS_transitions.css">
-
+<script type="text/javascript" src="media_js.js"></script>
+<style>
+#flower {
+    border: 2px solid black;
+}
+</style>
 <title>CSS Transition</title>
 </head>
 <body>
-    <video width="400" controls>
-        <source src="zoom_0.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
-    </video>
+  <video width="300" controls>
+    <source src="zoom_0.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
     <div>
-    <audio controls id="myAudio">
-        
-        <source src="02 You'll Be In My Heart.mp3" type="audio/mpeg" >
-        Your browser does not support the audio element.
+      <audio controls id="myAudio" onplay="changeText()" onpause="pausePlay()" >
+         <source src="02 You'll Be In My Heart.mp3" type="audio/mpeg" >
+         Your browser does not support the audio element.
       </audio>
-      <p id="musicAction" >You'll Be in My Heart</p>
-     
+        <p id="musicAction" >You'll Be in My Heart</p>
     </div>
-    <script>
-       var aud = document.getElementById("myAudio");
-       aud.onplay = function() {
-            document.getElementById("musicAction").innerHTML = "Playing";
-        };
-        aud.onpause = function() {
-            document.getElementById("musicAction").innerHTML = "Paused";
-        };
-       
-    </script>
-    <canvas id="myCanvas" width="400" height="300" style="border:1px solid  black;"></canvas>
-
+    <div>
+        <img id="flower" src="pink1.jpg" alt="Flower" width="200" height="200" >
+      <canvas id="myCanvas" width="400" height="300" style="border:1px solid  black;"></canvas>
+      <p id="picture"><button onclick="myCanvas()">Picture</button></p>
+      <p id="text"><button onclick="text()">Text</button></p>
+      <p id="text"><button onclick="shading()">Shading</button></p>
+    </div>
 </body>
 </html>
