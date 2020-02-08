@@ -5,12 +5,10 @@ function createButton() {
 	p.innerHTML = "A button and paragraph were added when the page is downloaded";
 	document.body.appendChild(p);
 	var btn = document.createElement("BUTTON");   
-    btn.innerHTML = "I was created on loading";
+	btn.innerHTML = "I was created on loading";
+	btn.id = "firstB";
+	p.id = "firstP";
 	document.body.appendChild(btn); 
-	document.getElementByTag;
-	var para = document.getElementsByTagName("P"[0]).id = "firstP";
-	var bu = document.getElementsByTagName("BUTTON"[0]).id = "firstB";
-	
 }
 function createList() {
 	var shopping = document.createElement("ul");
@@ -26,4 +24,31 @@ function createList() {
 	}
 	
 }
-
+function removeButton() {
+	var b= document.getElementById("firstB");
+	var c = document.getElementById("firstP");
+	if(document.body.contains(b) && document.body.contains(c) ) {
+	   b.remove();
+	   var d = document.getElementsByTagName("body");
+	   //c.parentNode.removeChild(c);
+	   d[0].removeChild(c);
+	}
+	else {
+		alert("they were already removed");
+	}
+	
+}
+function addToList() {
+	var shopping = document.getElementById("list");
+	if(document.body.contains(shopping)) {
+	   var li = document.createElement("li");
+	   li.innerHTML = "cearal";
+	   var item = document.getElementById("li4");
+	   shopping.insertBefore(li, item);
+	}
+	else {
+		alert("there is no list");
+	}
+	
+	
+}
