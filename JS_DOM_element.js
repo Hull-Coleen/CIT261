@@ -24,9 +24,6 @@ function createList() {
 		m.innerHTML = groceries[i];
 		shopping.appendChild(m);
 	}
-	//
-	//shopping.innerHTML = "List";
-	//m.innerHTML = "milk";
-	//shopping.appendChild(m);
+	
 }
 

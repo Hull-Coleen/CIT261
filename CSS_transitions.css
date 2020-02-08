@@ -30,14 +30,15 @@ img {
    
 	border: 2px solid black;
    transition : transform 4s 2s;
-   object-fit: scale-down;
-}
-img:hover {
-	transform: rotateY(180deg) scale(2) skew(20deg) translate(-60px, -90px);
-}
-.img2 {
    
-   object-fit: scale-down;
+}
+
+img:hover {
+	transform: rotateY(180deg) scale(.5) skew(20deg) translate(-60px, -90px);
+}
+#img1:hover {
+   transform: rotateY(180deg) scale(2) skew(20deg) translate(-60px, -90px);
+   
 }
 
 
