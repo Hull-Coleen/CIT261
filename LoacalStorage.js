@@ -24,19 +24,29 @@ function storageName() {
             console.log($("#color").val(),$("#color2").val(),$("#color3").val(),$("#color4").val())
             var cArray = JSON.stringify(colorArray);
             console.log(cArray);
+            if (typeof (Storage) !== "undefined") {
             localStorage.setItem("colorArray", cArray);
+            }
+            else {
+                $("#status3").html("I am sorry your browser doesn't support local storage.");
+             }
         });
         
    });
    $(document).ready(function(){
        $("#showColor").click(function(){
-           var color = localStorage.getItem("colorArray");
-           var c = JSON.parse(color);
-           var indexNumber = parseInt($("#arraySelect").val());
-            console.log(c[indexNumber]);
-           $("#status3").html(c[indexNumber]);
+            if (typeof (Storage) !== "undefined") {
+                var color = localStorage.getItem("colorArray");
+                var c = JSON.parse(color);
+                var indexNumber = parseInt($("#arraySelect").val());
+                console.log(c);
+                $("#status3").html(c[indexNumber]);
+            }
+            else {
+                $("#status3").html("I am sorry your browser doesn't support local storage.");
+            }
         });
-        
+  
    });
    $(document).ready(function(){
        $("#assocArray").click(function(){
@@ -48,12 +58,19 @@ function storageName() {
 
             };
            var p = JSON.stringify(assocArray);
+           console.log(p);
+           if (typeof (Storage) !== "undefined") {
            localStorage.setItem("personInfo", p);
            showArray();
+           }
+        else {
+            $("#status3").html("I am sorry your browser doesn't support local storage.");
+         }
         });
         
    });
    function showArray() {
+    if (typeof (Storage) !== "undefined") {
         var  person = localStorage.getItem("personInfo");
         var assocPerson = JSON.parse(person);
         console.log(person);
@@ -61,5 +78,9 @@ function storageName() {
         $("#status4").html("First Name: " + assocPerson.name +"<br>" + "Last Name: " 
         + assocPerson.lastName + "<br>" + "Eye Color: " + assocPerson.eyeColor 
         + "<br>" + "Age: " + assocPerson.age);
+    }
+    else {
+        $("#status4").html("I am sorry your browser doesn't support local storage.");
+     }
    }
     

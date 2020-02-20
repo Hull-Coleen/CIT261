@@ -19,7 +19,6 @@ function cssStyle() {
   }
   function test2(p) {
       console.log("button animation function");
-      p.style.animation = "b 6s linear 0s infinite";
   }
   function loading() {
       var text = "<p>I was loaded using javascript</p>"
