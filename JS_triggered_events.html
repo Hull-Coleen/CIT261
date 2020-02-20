@@ -2,122 +2,12 @@
 <html lang="en-us">
 <head>
 <meta charset="UTF-8">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="js_triggered.css">
 <title></title>
 <style>
- 
-#head1{
-   font-family : Garamond;
-   font-size : 25px;
-   color : red;
-   background : blue;  
-   width : 50%;
-   height : 50px;
-   transition: background 8s ease-in 2s, width 4s linear 2s, height 8s;
-   
-}
-
-#para1 {  
-   font-family : Garamond;
-   font-size : 25px;
-   color : pink;
-   background: blue;
-   height : 50px;
-   width : 100%;
-   transition : color 5s, font-size 4s, background 8s 2s, height 4s ease-out 2s, width 8s;	
-}
-
-img {
-   
-	border: 2px solid black;
-   transition : transform 4s 2s;
-   
-}
-
-#btn1 {
-    padding: 10px;
-    font-style: Garamond;
-    color: purple;
-    border: 2px solid black;
-    border-radius: 20px; 
-}
-
-@keyframes b {
-    from {
-        transform: skewX(0deg) rotate(0deg) translate(0px, 0px);
-    }
-    25% {
-        transform: skewX(25deg) rotate(360deg) translate(80px, 0px); 
-    }
-    75%{
-        transform: skewX(0deg) rotate(360deg) translate(80px, 80px);
-    }
-    to {
-        transform: skewX(25deg) rotate(360deg) translate(0px, 80px); 
-    }
-   
-}
-
-p {
-  background: pink; 
-}
-
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%; 
-  }
-  75% {
-    font-size: 300%;
-    margin-left: 25%;
-    width: 150%;
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-}
-
-@keyframes moveUp {
-    from {
-        margin-top: 100%;
-    }
-    to {
-       margin-top: 10%;
-    }
-}
 </style>
-
-<script>
-   function cssStyle() {
-  document.getElementById("para1").style.background = "pink";
-  document.getElementById("para1").style.fontSize = "50px";
-  document.getElementById("para1").style.height = "200px";
-  document.getElementById("para1").style.color = "blue";
-}
-function cssStyleBack(param) {
-   param.style.background ="blue";
-   param.style.fontSize = "25px";
-   param.style.height = "50px";
-   param.style.color = "pink";
-}
-function test(param) {
-  param.style.background = "pink";
-  param.style.fontSize = "50px";
-  param.style.height = "200px";
-  param.style.color = "blue";
-}
-function test2(p) {
-    console.log("button animation function");
-    p.style.animation = "b 6s linear 0s infinite";
-}
-function loading() {
-    var text = "<p>I was loaded using javascript</p>"
-    $("body").append(text);
-}
-</script>
 
 </head>
 <body onload = "loading()">
@@ -131,59 +21,7 @@ function loading() {
 <div><h1 id="animation" >CSS Animation</h1></div> 
 <div><p  class = "test" id = "test" >Paragraph</p></div>
 <button id = "btn1" onload = "test2(this)">Animation</button>
-<script>
-    $(document).ready(function(){
-         $("#test").mouseenter(function() {
-               $("#test").css("animation", "b 6s linear 0s infinite");
-         });
-    });
-    $(document).ready(function(){
-         $("#test").click(function() {
-               $("#test").css("animationPlayState", "paused");
-         });
-    });
-    $(document).ready(function(){
-         $("#animation").mousedown(function() {
-               $("#animation").css("animation", "slidein 5s");
-         });
-    });
-    $(document).ready(function(){
-         $("#img1").mouseup(function() {
-               $("#img1").css("transform", "rotateY(180deg) scale(2) skew(20deg) translate(-60px, -90px)");
-         });
-    });
-    $(document).ready(function(){
-         $(".img2").hover(function() {
-               $(".img2").css("transform", "rotateY(180deg) scale(.5) skew(20deg) translate(-60px, -90px)");
-         });
-    });
-    
-    $(document).ready(function(){
-         $("button").click(function() {
-            console.log('click button');
-               $("button").css("animation", "b 6s linear 0s 5");
-         });
-    });
-    $(document).ready(function(){
-         $("#animation").on("touchstart", function() {
-            console.log("h1 touch");
-               $("button").css("animation", "b 6s linear 0s 5");
-         });
-    });
-    $(document).ready(function(){
-         $("#head1").on("touchend", function() {
-            console.log("in fucntion");
-               $("#head1").css("animation", "b 6s linear 0s 2");
-         });
-    });
-    $(document).ready(function(){
-         $("p").on("touchmove", function() {
-            console.log("swipe fucntion");
-               $("p").css("animation", "b 6s linear 0s 2");
-         });
-    });
-
-</script>
+<script type="text/javascript" src="js_triggered.js"></script>
 
 </body>
 </html>
