@@ -159,23 +159,29 @@ function loading() {
     });
     
     $(document).ready(function(){
-         $("button").hover(function() {
-            
+         $("button").click(function() {
+            console.log('click button');
                $("button").css("animation", "b 6s linear 0s 5");
          });
     });
     $(document).ready(function(){
-         $("button").on("tap", function() {
-            
+         $("#animation").on("touchstart", function() {
+            console.log("h1 touch");
                $("button").css("animation", "b 6s linear 0s 5");
          });
     });
-    /*$(document).ready(function(){
-         $("body").on("tap", function() {
-            
-               $("button").css("animation", "b 6s linear 0s 5");
+    $(document).ready(function(){
+         $("#head1").on("touchend", function() {
+            console.log("in fucntion");
+               $("#head1").css("animation", "b 6s linear 0s 2");
          });
-    });*/
+    });
+    $(document).ready(function(){
+         $("p").on("touchmove", function() {
+            console.log("swipe fucntion");
+               $("p").css("animation", "b 6s linear 0s 2");
+         });
+    });
 
 </script>
 
